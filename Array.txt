@@ -1,0 +1,27 @@
+public class Array 
+{
+
+public static void main(String[] args) 
+{  
+  double[][] marksTable;
+  double mark;
+  int studentNo;
+  int moduleNo;
+
+  marksTable = new double[40][8];
+
+  Scanner fromKeyboard = new Scanner(System.in);
+
+  for(studentNo = 1; studentNo <= 40; studentNo++)
+  {
+      System.out.print("Enter marks for student no " +studentNo);
+
+      for (moduleNo = 1; moduleNo <= 8; moduleNo++)
+      {
+          System.out.print("Mark for student "+studentNo+" for module no "+moduleNo+":");
+          mark = fromKeyboard.nextDouble();
+          marksTable[studentNo][moduleNo] = mark;
+      }    
+  }
+} 
+}
